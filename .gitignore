@@ -2,5 +2,10 @@ node_modules/
 .nuxt/
 .output/
 dist/
+.data/
 .DS_Store
 *.log
+
+# Reference files (not needed in repo)
+mockup-*.html
+source-content/
