@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useProgress } from '~/composables/useProgress'
+
 const props = defineProps<{
   day: number
   title: string
@@ -9,6 +11,8 @@ const props = defineProps<{
 }>()
 
 const dayNum = computed(() => String(props.day).padStart(2, '0'))
+const { isComplete } = useProgress()
+const completed = computed(() => isComplete(props.courseSlug, `day-${dayNum.value}`))
 </script>
 
 <template>
@@ -22,8 +26,9 @@ const dayNum = computed(() => String(props.day).padStart(2, '0'))
     :style="{ '--hover-color': weekColor === 'week1' ? '#3B82F6' : weekColor === 'week2' ? '#10B981' : weekColor === 'week3' ? '#8B5CF6' : '#F59E0B' }"
   >
     <div
-      class="mb-1.5 text-[0.72rem] font-bold uppercase tracking-wider text-text-muted transition-colors group-hover:text-[var(--hover-color)]"
+      class="mb-1.5 flex items-center gap-1.5 text-[0.72rem] font-bold uppercase tracking-wider text-text-muted transition-colors group-hover:text-[var(--hover-color)]"
     >
+      <span v-if="completed" class="text-emerald-400 text-[0.65rem]">✓</span>
       Day {{ dayNum }}
     </div>
     <div class="text-sm font-medium leading-snug text-text-main">
