@@ -1,4 +1,6 @@
-node_modules
-.output
-.nuxt
-dist
+node_modules/
+.nuxt/
+.output/
+dist/
+.DS_Store
+*.log
