@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+  <!-- Book base -->
+  <path d="M4 6C4 5 5 4 6 4h8c2 0 2 1 2 1s0-1 2-1h8c1 0 2 1 2 2v18c0 1-1 2-2 2H18c-1 0-1.5.5-2 1-.5-.5-1-1-2-1H6c-1 0-2-1-2-2V6z" fill="#1A1A1A" stroke="url(#g)" stroke-width="1.5"/>
+  <!-- Book spine -->
+  <line x1="16" y1="5" x2="16" y2="26" stroke="url(#g)" stroke-width="1" opacity="0.5"/>
+  <!-- Left page lines -->
+  <line x1="7" y1="9" x2="13" y2="9" stroke="#F59E0B" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  <line x1="7" y1="12" x2="12" y2="12" stroke="#F59E0B" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+  <line x1="7" y1="15" x2="13" y2="15" stroke="#F59E0B" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  <line x1="7" y1="18" x2="11" y2="18" stroke="#F59E0B" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+  <!-- Right page: code brackets -->
+  <text x="22" y="14.5" text-anchor="middle" font-family="monospace" font-size="10" font-weight="bold" fill="url(#g)">&lt;/&gt;</text>
+</svg>
