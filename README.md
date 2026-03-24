@@ -21,7 +21,7 @@ Topics include: the agent loop, tools & function calling, context management, me
 
 ## Stack
 
-- **[Nuxt 3](https://nuxt.com)** — Vue framework with static generation (`nuxt generate`)
+- **[Nuxt 4](https://nuxt.com)** — Vue framework with static generation (`nuxt generate`)
 - **[@nuxt/content](https://content.nuxt.com)** — Markdown-driven content, auto-routing, Shiki syntax highlighting
 - **[Tailwind CSS](https://tailwindcss.com)** — Utility-first styling
 - **[Cloudflare Pages](https://pages.cloudflare.com)** — Static hosting with automatic deployments
@@ -29,31 +29,35 @@ Topics include: the agent loop, tools & function calling, context management, me
 ## Project Structure
 
 ```
-├── content/
+├── app/                             # Nuxt 4 app directory
+│   ├── app.vue
+│   ├── pages/
+│   │   ├── index.vue                # Hub landing page (course grid)
+│   │   └── [course]/
+│   │       ├── index.vue            # Course homepage (hero, progress, weekly grid)
+│   │       └── [slug].vue           # Lesson page (sidebar, content, prev/next nav)
+│   ├── components/
+│   │   ├── DayCard.vue              # Lesson card in the weekly grid
+│   │   ├── WeekSection.vue          # Weekly grouping with header
+│   │   ├── LessonSidebar.vue        # Sidebar navigation (all days)
+│   │   ├── LessonNav.vue            # Previous/Next lesson navigation
+│   │   ├── ProgressBar.vue          # 30-day visual progress bar
+│   │   ├── SiteNav.vue              # Top navigation bar
+│   │   └── SiteFooter.vue           # Footer with credits
+│   ├── composables/
+│   ├── layouts/
+│   │   └── default.vue
+│   └── assets/
+├── content/                         # Stays at root (Nuxt Content)
 │   ├── courses/
-│   │   └── agentic-coding.yml    # Course metadata (title, weeks, colors)
+│   │   └── agentic-coding.yml       # Course metadata (title, weeks, colors)
 │   └── agentic-coding/
 │       └── day-01.md ... day-30.md
-├── pages/
-│   ├── index.vue                  # Hub landing page (course grid)
-│   └── [course]/
-│       ├── index.vue              # Course homepage (hero, progress, weekly grid)
-│       └── [slug].vue             # Lesson page (sidebar, content, prev/next nav)
-├── components/
-│   ├── DayCard.vue                # Lesson card in the weekly grid
-│   ├── WeekSection.vue            # Weekly grouping with header
-│   ├── LessonSidebar.vue          # Sidebar navigation (all days)
-│   ├── LessonNav.vue              # Previous/Next lesson navigation
-│   ├── ProgressBar.vue            # 30-day visual progress bar
-│   ├── SiteNav.vue                # Top navigation bar
-│   └── SiteFooter.vue             # Footer with credits
-├── layouts/
-│   └── default.vue
 ├── public/
-│   └── favicon.svg                # Open book favicon
+│   └── favicon.svg                  # Open book favicon
 ├── nuxt.config.ts
 ├── tailwind.config.ts
-└── .github/workflows/deploy.yml   # CI/CD to Cloudflare Pages
+└── .github/workflows/deploy.yml     # CI/CD to Cloudflare Pages
 ```
 
 ## Adding a New Course
