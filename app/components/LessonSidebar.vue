@@ -9,16 +9,11 @@ const props = defineProps<{
 }>()
 
 const { isComplete } = useProgress()
-const completedDays = ref(new Set<number>())
 
-onMounted(() => {
-  const set = new Set<number>()
-  for (const d of props.days) {
-    const slug = `day-${String(d.day).padStart(2, '0')}`
-    if (isComplete(props.courseSlug, slug)) set.add(d.day)
-  }
-  completedDays.value = set
-})
+function isDayComplete(day: number): boolean {
+  const slug = `day-${String(day).padStart(2, '0')}`
+  return isComplete(props.courseSlug, slug)
+}
 
 const weekColorMap: Record<number, string> = {
   1: '#3B82F6',
@@ -68,7 +63,7 @@ function daySlug(day: number) {
         "
       >
         <span class="flex min-w-[28px] items-center gap-1 text-[0.7rem]" :class="d.day === currentDay ? 'text-brand/70' : 'text-text-muted'">
-          <span v-if="completedDays.has(d.day)" class="text-emerald-400 text-[0.6rem]">&#10003;</span>
+          <span v-if="isDayComplete(d.day)" class="text-emerald-400 text-[0.6rem]">&#10003;</span>
           {{ String(d.day).padStart(2, '0') }}
         </span>
         <span class="truncate">{{ d.title }}</span>
