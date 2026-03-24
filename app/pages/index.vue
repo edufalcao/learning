@@ -1,7 +1,20 @@
 <script setup lang="ts">
+import { useProgress } from '~/composables/useProgress'
+
 const { data: courses } = await useAsyncData('all-courses', () =>
   queryCollection('courses').all()
 )
+
+const { getCompletedCount } = useProgress()
+const courseProgress = ref<Record<string, number>>({})
+
+onMounted(() => {
+  const progress: Record<string, number> = {}
+  for (const course of courses.value || []) {
+    progress[course.slug] = getCompletedCount(course.slug)
+  }
+  courseProgress.value = progress
+})
 
 useHead({
   title: 'Eduardo Falcão — Learning Hub',
@@ -53,14 +66,28 @@ useSeoMeta({
           />
 
           <div class="mt-2">
-            <div
-              class="mb-3 inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[0.7rem] font-semibold uppercase tracking-wider"
-              :style="{
-                color: course.color,
-                background: course.color + '14',
-              }"
-            >
-              {{ course.lessons }} lessons
+            <div class="mb-3 flex flex-wrap items-center gap-2">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[0.7rem] font-semibold uppercase tracking-wider"
+                :style="{
+                  color: course.color,
+                  background: course.color + '14',
+                }"
+              >
+                {{ course.lessons }} lessons
+              </span>
+              <span
+                v-if="courseProgress[course.slug]"
+                class="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 text-[0.65rem] font-semibold text-emerald-400"
+              >
+                {{ courseProgress[course.slug] }}/{{ course.lessons }} completed
+              </span>
+              <span
+                v-else-if="courseProgress[course.slug] === 0"
+                class="inline-flex items-center rounded-full bg-white/5 px-2 py-0.5 text-[0.65rem] font-medium text-text-muted"
+              >
+                Start learning
+              </span>
             </div>
 
             <h3 class="mb-2 font-display text-lg font-bold leading-snug text-white transition-colors group-hover:text-[var(--course-color)]">

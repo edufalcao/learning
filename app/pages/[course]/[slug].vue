@@ -1,9 +1,31 @@
 <script setup lang="ts">
 import { getWeekMeta } from '~/composables/useDays'
+import { useProgress } from '~/composables/useProgress'
 
 const route = useRoute()
 const courseSlug = computed(() => route.params.course as string)
 const slug = computed(() => route.params.slug as string)
+
+const { markComplete, markIncomplete, isComplete } = useProgress()
+const completed = ref(false)
+
+onMounted(() => {
+  completed.value = isComplete(courseSlug.value, slug.value)
+})
+
+watch([courseSlug, slug], () => {
+  completed.value = isComplete(courseSlug.value, slug.value)
+})
+
+function toggleComplete() {
+  if (completed.value) {
+    markIncomplete(courseSlug.value, slug.value)
+    completed.value = false
+  } else {
+    markComplete(courseSlug.value, slug.value)
+    completed.value = true
+  }
+}
 
 // Map course slugs to collection names
 const collectionMap: Record<string, string> = {
@@ -114,6 +136,33 @@ useSeoMeta({
       <!-- Prose content -->
       <div class="prose prose-invert max-w-[720px]">
         <ContentRenderer :value="page" />
+      </div>
+
+      <!-- Mark as completed -->
+      <div class="mt-12 max-w-[720px]">
+        <button
+          @click="toggleComplete"
+          class="group inline-flex items-center gap-2.5 rounded-lg border px-5 py-2.5 text-sm font-semibold transition-all duration-200 active:scale-[0.97]"
+          :class="
+            completed
+              ? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/15'
+              : 'border-brand/30 bg-brand/10 text-brand hover:bg-brand/15'
+          "
+        >
+          <span
+            class="flex h-5 w-5 items-center justify-center rounded-full transition-all duration-200"
+            :class="
+              completed
+                ? 'bg-emerald-500 text-white'
+                : 'border-2 border-current opacity-50 group-hover:opacity-80'
+            "
+          >
+            <svg v-if="completed" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          {{ completed ? 'Completed' : 'Mark as completed' }}
+        </button>
       </div>
 
       <!-- Prev/Next nav -->

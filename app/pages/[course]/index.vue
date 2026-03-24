@@ -1,9 +1,19 @@
 <script setup lang="ts">
 import { groupByWeek } from '~/composables/useDays'
 import type { DayInfo } from '~/composables/useDays'
+import { useProgress } from '~/composables/useProgress'
 
 const route = useRoute()
 const courseSlug = computed(() => route.params.course as string)
+
+const { getCompletedCount, getCompletedSlugs } = useProgress()
+const completedCount = ref(0)
+const completedSlugs = ref<string[]>([])
+
+onMounted(() => {
+  completedCount.value = getCompletedCount(courseSlug.value)
+  completedSlugs.value = getCompletedSlugs(courseSlug.value)
+})
 
 // Map course slugs to collection names
 const collectionMap: Record<string, string> = {
@@ -95,7 +105,7 @@ useSeoMeta({
     </section>
 
     <!-- Progress Bar -->
-    <ProgressBar :weeks="course.weeks" :total-lessons="course.lessons" />
+    <ProgressBar :weeks="course.weeks" :total-lessons="course.lessons" :completed="completedCount" :completed-slugs="completedSlugs" />
 
     <!-- Weeks Grid -->
     <section id="weeks" class="mx-auto max-w-[900px] px-8 pb-24">
