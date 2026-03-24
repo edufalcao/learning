@@ -16,8 +16,16 @@ function writeStorage(data: ProgressData) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
 }
 
+// Shared global state so all components react to changes
+const progress = reactive<ProgressData>({})
+let initialized = false
+
 export function useProgress() {
-  const progress = reactive<ProgressData>(readStorage())
+  if (!initialized && import.meta.client) {
+    const stored = readStorage()
+    Object.assign(progress, stored)
+    initialized = true
+  }
 
   function persist() {
     writeStorage(progress)
