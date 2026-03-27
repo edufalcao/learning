@@ -19,7 +19,7 @@ const weekColorMap: Record<number, string> = {
   1: '#3B82F6',
   2: '#10B981',
   3: '#8B5CF6',
-  4: '#00E5CC'
+  4: '#FF006E'
 };
 
 const weeks = computed(() => {

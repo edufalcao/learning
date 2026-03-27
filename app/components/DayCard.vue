@@ -22,7 +22,7 @@ const completed = computed(() => isComplete(props.courseSlug, `day-${dayNum.valu
     :class="[
       isReview ? 'border-dashed border-border' : 'border-border'
     ]"
-    :style="{ '--hover-color': weekColor === 'week1' ? '#3B82F6' : weekColor === 'week2' ? '#10B981' : weekColor === 'week3' ? '#8B5CF6' : '#00E5CC' }"
+    :style="{ '--hover-color': weekColor === 'week1' ? '#3B82F6' : weekColor === 'week2' ? '#10B981' : weekColor === 'week3' ? '#8B5CF6' : '#FF006E' }"
   >
     <div
       class="mb-1.5 flex items-center gap-1.5 text-[0.72rem] font-bold uppercase tracking-wider text-text-muted transition-colors duration-150 ease-smooth group-hover:text-[var(--hover-color)]"

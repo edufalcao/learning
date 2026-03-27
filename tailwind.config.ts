@@ -34,7 +34,7 @@ export default <Config>{
         'week1': '#3B82F6',
         'week2': '#10B981',
         'week3': '#8B5CF6',
-        'week4': '#00E5CC'
+        'week4': '#FF006E'
       },
       fontFamily: {
         sans: ['DM Sans', 'Space Grotesk', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
