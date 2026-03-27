@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { useProgress } from '~/composables/useProgress'
+import { useProgress } from '~/composables/useProgress';
 
 const props = defineProps<{
-  day: number
-  title: string
-  tag: string
-  weekColor: string
-  courseSlug: string
+  day: number,
+  title: string,
+  tag: string,
+  weekColor: string,
+  courseSlug: string,
   isReview?: boolean
-}>()
+}>();
 
-const dayNum = computed(() => String(props.day).padStart(2, '0'))
-const { isComplete } = useProgress()
-const completed = computed(() => isComplete(props.courseSlug, `day-${dayNum.value}`))
+const dayNum = computed(() => String(props.day).padStart(2, '0'));
+const { isComplete } = useProgress();
+const completed = computed(() => isComplete(props.courseSlug, `day-${dayNum.value}`));
 </script>
 
 <template>
@@ -20,14 +20,17 @@ const completed = computed(() => isComplete(props.courseSlug, `day-${dayNum.valu
     :to="`/${courseSlug}/day-${dayNum}`"
     class="group block rounded-xl border bg-surface p-4 no-underline transition-all duration-150 ease-smooth hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40"
     :class="[
-      isReview ? 'border-dashed border-border' : 'border-border',
+      isReview ? 'border-dashed border-border' : 'border-border'
     ]"
     :style="{ '--hover-color': weekColor === 'week1' ? '#3B82F6' : weekColor === 'week2' ? '#10B981' : weekColor === 'week3' ? '#8B5CF6' : '#00E5CC' }"
   >
     <div
       class="mb-1.5 flex items-center gap-1.5 text-[0.72rem] font-bold uppercase tracking-wider text-text-muted transition-colors duration-150 ease-smooth group-hover:text-[var(--hover-color)]"
     >
-      <span v-if="completed" class="text-emerald-400 text-[0.65rem]">✓</span>
+      <span
+        v-if="completed"
+        class="text-emerald-400 text-[0.65rem]"
+      >✓</span>
       Day {{ dayNum }}
     </div>
     <div class="text-sm font-medium leading-snug text-text-main">

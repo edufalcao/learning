@@ -1,4 +1,4 @@
-import { defineCollection, defineContentConfig, z } from '@nuxt/content'
+import { defineCollection, defineContentConfig, z } from '@nuxt/content';
 
 export default defineContentConfig({
   collections: {
@@ -15,9 +15,9 @@ export default defineContentConfig({
           number: z.number(),
           name: z.string(),
           subtitle: z.string(),
-          color: z.string(),
-        })),
-      }),
+          color: z.string()
+        }))
+      })
     }),
     agentic_coding: defineCollection({
       type: 'page',
@@ -28,8 +28,8 @@ export default defineContentConfig({
         week: z.number(),
         weekName: z.string(),
         description: z.string(),
-        tag: z.string(),
-      }),
-    }),
-  },
-})
+        tag: z.string()
+      })
+    })
+  }
+});

@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import type { WeekInfo } from '~/composables/useDays'
+import type { WeekInfo } from '~/composables/useDays';
 
 defineProps<{
-  week: WeekInfo
+  week: WeekInfo,
   courseSlug: string
-}>()
+}>();
 
 const weekColorMap: Record<string, string> = {
   week1: '#3B82F6',
   week2: '#10B981',
   week3: '#8B5CF6',
-  week4: '#00E5CC',
-}
+  week4: '#00E5CC'
+};
 </script>
 
 <template>
@@ -21,7 +21,7 @@ const weekColorMap: Record<string, string> = {
         class="rounded px-2.5 py-1 text-[0.72rem] font-bold uppercase tracking-widest"
         :style="{
           color: weekColorMap[week.color],
-          background: weekColorMap[week.color] + '14',
+          background: weekColorMap[week.color] + '14'
         }"
       >
         Week {{ week.number }}

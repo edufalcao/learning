@@ -1,29 +1,29 @@
 <script setup lang="ts">
-import { useProgress } from '~/composables/useProgress'
+import { useProgress } from '~/composables/useProgress';
 
 const { data: courses } = await useAsyncData('all-courses', () =>
   queryCollection('courses').all()
-)
+);
 
-const { getCompletedCount } = useProgress()
-const courseProgress = ref<Record<string, number>>({})
+const { getCompletedCount } = useProgress();
+const courseProgress = ref<Record<string, number>>({});
 
 onMounted(() => {
-  const progress: Record<string, number> = {}
+  const progress: Record<string, number> = {};
   for (const course of courses.value || []) {
-    progress[course.slug] = getCompletedCount(course.slug)
+    progress[course.slug] = getCompletedCount(course.slug);
   }
-  courseProgress.value = progress
-})
+  courseProgress.value = progress;
+});
 
 useHead({
-  title: 'Eduardo Falcão — Learning Hub',
-})
+  title: 'Eduardo Falcão — Learning Hub'
+});
 
 useSeoMeta({
   ogTitle: 'Eduardo Falcão — Learning Hub',
-  ogDescription: 'Structured learning series on software engineering & AI.',
-})
+  ogDescription: 'Structured learning series on software engineering & AI.'
+});
 </script>
 
 <template>
@@ -38,7 +38,7 @@ useSeoMeta({
       </div>
 
       <h1 class="mb-5 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
-        Eduardo Falcão<br />
+        Eduardo Falcão<br>
         <span class="gradient-text">Learning Hub</span>
       </h1>
 
@@ -50,7 +50,9 @@ useSeoMeta({
 
     <!-- Course Grid -->
     <section class="mx-auto max-w-[900px] px-8 pb-24">
-      <h2 class="mb-6 text-sm font-bold uppercase tracking-widest text-text-muted">Courses</h2>
+      <h2 class="mb-6 text-sm font-bold uppercase tracking-widest text-text-muted">
+        Courses
+      </h2>
       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <NuxtLink
           v-for="course in courses"
@@ -71,7 +73,7 @@ useSeoMeta({
                 class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[0.7rem] font-semibold uppercase tracking-wider"
                 :style="{
                   color: course.color,
-                  background: course.color + '14',
+                  background: course.color + '14'
                 }"
               >
                 {{ course.lessons }} lessons
@@ -107,7 +109,7 @@ useSeoMeta({
                 :style="{
                   color: week.color,
                   background: week.color + '14',
-                  border: '1px solid ' + week.color + '30',
+                  border: '1px solid ' + week.color + '30'
                 }"
               >
                 {{ week.name }}

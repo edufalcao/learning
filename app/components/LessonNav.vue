@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const props = defineProps<{
-  prevDay?: { day: number; title: string } | null
-  nextDay?: { day: number; title: string } | null
+  prevDay?: { day: number, title: string } | null,
+  nextDay?: { day: number, title: string } | null,
   courseSlug: string
-}>()
+}>();
 
 function daySlug(day: number) {
-  return `/${props.courseSlug}/day-${String(day).padStart(2, '0')}`
+  return `/${props.courseSlug}/day-${String(day).padStart(2, '0')}`;
 }
 </script>
 
