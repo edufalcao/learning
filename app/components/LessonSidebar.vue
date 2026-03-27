@@ -50,7 +50,7 @@ function daySlug(day: number) {
       class="mb-4"
     >
       <div
-        class="px-4 pb-1 text-[0.68rem] font-bold uppercase tracking-widest"
+        class="px-4 pb-1 text-[0.75rem] font-bold uppercase tracking-widest"
         :style="{ color: weekColorMap[week.number] }"
       >
         Week {{ week.number }} — {{ week.meta.name }}
@@ -59,7 +59,7 @@ function daySlug(day: number) {
         v-for="d in week.days"
         :key="d.day"
         :to="daySlug(d.day)"
-        class="flex items-center gap-2 border-r-2 px-4 py-1.5 text-[0.82rem] no-underline transition-all duration-150 ease-smooth"
+        class="flex items-center gap-2 border-r-2 px-4 py-1.5 text-[0.88rem] no-underline transition-all duration-150 ease-smooth"
         :class="
           d.day === currentDay
             ? 'border-r-accent bg-accent/5 text-accent'
@@ -67,12 +67,12 @@ function daySlug(day: number) {
         "
       >
         <span
-          class="flex min-w-[28px] items-center gap-1 text-[0.7rem]"
+          class="flex min-w-[28px] items-center gap-1 text-[0.78rem]"
           :class="d.day === currentDay ? 'text-accent/70' : 'text-text-muted'"
         >
           <span
             v-if="isDayComplete(d.day)"
-            class="text-emerald-400 text-[0.6rem]"
+            class="text-emerald-400 text-[0.65rem]"
           >&#10003;</span>
           {{ String(d.day).padStart(2, '0') }}
         </span>

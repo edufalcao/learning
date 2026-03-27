@@ -68,25 +68,25 @@ useSeoMeta({
     <!-- Hero -->
     <section class="mx-auto max-w-[820px] px-8 pb-16 pt-20 text-center">
       <div
-        class="mx-auto mb-6 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[0.78rem] tracking-wide"
+        class="mx-auto mb-6 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[0.85rem] tracking-wide"
         :style="{
           color: course.color,
           borderColor: course.color + '33',
           background: course.color + '14'
         }"
       >
-        <span class="text-[0.5rem]">●</span>
+        <span class="text-[0.55rem]">●</span>
         {{ course.lessons }} lessons · Eduardo Falcão
       </div>
 
-      <h1 class="mb-5 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
+      <h1 class="mb-5 font-display text-5xl font-extrabold leading-tight tracking-tight text-white sm:text-6xl">
         {{ course.title.replace('30 Days of ', '30 Days of\n').split('\n')[0] }}<br>
         <span :style="{ color: course.color }">
           {{ course.title.replace('30 Days of ', '').trim() || course.title }}
         </span>
       </h1>
 
-      <p class="mx-auto mb-10 max-w-[540px] text-base leading-relaxed text-text-muted sm:text-lg">
+      <p class="mx-auto mb-10 max-w-[540px] text-lg leading-relaxed text-text-muted sm:text-xl">
         {{ course.description }}
         One lesson per day. Each under 10 minutes.
       </p>
@@ -95,7 +95,7 @@ useSeoMeta({
         <span
           v-for="week in course.weeks"
           :key="week.number"
-          class="rounded-full border px-3 py-1 text-[0.78rem] font-medium"
+          class="rounded-full border px-3 py-1 text-[0.85rem] font-medium"
           :style="{
             color: week.color,
             borderColor: week.color + '40',

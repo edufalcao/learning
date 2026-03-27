@@ -1,5 +1,5 @@
 <template>
-  <footer class="border-t border-border px-8 py-8 text-center text-sm text-text-muted">
+  <footer class="border-t border-border px-8 py-8 text-center text-base text-text-muted">
     <p>
       By <a
         href="https://edufalcao.com"

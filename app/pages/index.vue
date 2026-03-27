@@ -31,18 +31,18 @@ useSeoMeta({
     <!-- Hero -->
     <section class="mx-auto max-w-[820px] px-8 pb-16 pt-20 text-center">
       <div
-        class="mx-auto mb-6 inline-flex items-center gap-1.5 rounded-full border border-accent/20 bg-accent/10 px-3 py-1 text-[0.78rem] tracking-wide text-accent"
+        class="mx-auto mb-6 inline-flex items-center gap-1.5 rounded-full border border-accent/20 bg-accent/10 px-3 py-1 text-[0.85rem] tracking-wide text-accent"
       >
-        <span class="text-[0.5rem]">●</span>
+        <span class="text-[0.55rem]">●</span>
         Learning Hub
       </div>
 
-      <h1 class="mb-5 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
+      <h1 class="mb-5 font-display text-5xl font-extrabold leading-tight tracking-tight text-white sm:text-6xl">
         Eduardo Falcão<br>
         <span class="gradient-text">Learning Hub</span>
       </h1>
 
-      <p class="mx-auto mb-12 max-w-[540px] text-base leading-relaxed text-text-muted sm:text-lg">
+      <p class="mx-auto mb-12 max-w-[540px] text-lg leading-relaxed text-text-muted sm:text-xl">
         Structured learning series on software engineering & AI.
         Deep dives, one topic at a time.
       </p>
@@ -50,7 +50,7 @@ useSeoMeta({
 
     <!-- Course Grid -->
     <section class="mx-auto max-w-[900px] px-8 pb-24">
-      <h2 class="mb-6 text-sm font-bold uppercase tracking-widest text-text-muted">
+      <h2 class="mb-6 text-base font-bold uppercase tracking-widest text-text-muted">
         Courses
       </h2>
       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -70,7 +70,7 @@ useSeoMeta({
           <div class="mt-2">
             <div class="mb-3 flex flex-wrap items-center gap-2">
               <span
-                class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[0.7rem] font-semibold uppercase tracking-wider"
+                class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[0.78rem] font-semibold uppercase tracking-wider"
                 :style="{
                   color: course.color,
                   background: course.color + '14'
@@ -80,23 +80,23 @@ useSeoMeta({
               </span>
               <span
                 v-if="courseProgress[course.slug]"
-                class="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 text-[0.65rem] font-semibold text-emerald-400"
+                class="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 text-[0.72rem] font-semibold text-emerald-400"
               >
                 {{ courseProgress[course.slug] }}/{{ course.lessons }} completed
               </span>
               <span
                 v-else-if="courseProgress[course.slug] === 0"
-                class="inline-flex items-center rounded-full bg-white/5 px-2 py-0.5 text-[0.65rem] font-medium text-text-muted"
+                class="inline-flex items-center rounded-full bg-white/5 px-2 py-0.5 text-[0.72rem] font-medium text-text-muted"
               >
                 Start learning
               </span>
             </div>
 
-            <h3 class="mb-2 font-display text-lg font-bold leading-snug text-white transition-colors duration-150 ease-smooth group-hover:text-[var(--course-color)]">
+            <h3 class="mb-2 font-display text-xl font-bold leading-snug text-white transition-colors duration-150 ease-smooth group-hover:text-[var(--course-color)]">
               {{ course.title }}
             </h3>
 
-            <p class="text-sm leading-relaxed text-text-muted">
+            <p class="text-base leading-relaxed text-text-muted">
               {{ course.description }}
             </p>
 
@@ -105,7 +105,7 @@ useSeoMeta({
               <span
                 v-for="week in course.weeks"
                 :key="week.number"
-                class="rounded-full px-2 py-0.5 text-[0.65rem] font-medium"
+                class="rounded-full px-2 py-0.5 text-[0.72rem] font-medium"
                 :style="{
                   color: week.color,
                   background: week.color + '14',

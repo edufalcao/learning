@@ -57,7 +57,7 @@ const days = computed(() => {
 
 <template>
   <div class="mx-auto max-w-[820px] px-8 pb-16">
-    <div class="mb-2 flex justify-between text-xs text-text-muted">
+    <div class="mb-2 flex justify-between text-sm text-text-muted">
       <span>{{ completedCount }} of {{ total }} completed</span>
       <span :class="percent === 100 ? 'text-emerald-400' : 'text-accent'">{{ percent }}%</span>
     </div>

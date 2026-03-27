@@ -18,7 +18,7 @@ const weekColorMap: Record<string, string> = {
   <div class="mb-14">
     <div class="mb-5 flex items-center gap-3">
       <span
-        class="rounded px-2.5 py-1 text-[0.72rem] font-bold uppercase tracking-widest"
+        class="rounded px-2.5 py-1 text-[0.8rem] font-bold uppercase tracking-widest"
         :style="{
           color: weekColorMap[week.color],
           background: weekColorMap[week.color] + '14'
@@ -26,7 +26,7 @@ const weekColorMap: Record<string, string> = {
       >
         Week {{ week.number }}
       </span>
-      <span class="text-base font-semibold text-text-main">
+      <span class="text-lg font-semibold text-text-main">
         {{ week.name }}
         <span class="font-normal text-text-muted"> — {{ week.subtitle }}</span>
       </span>

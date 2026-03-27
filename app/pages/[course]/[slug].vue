@@ -110,7 +110,7 @@ useSeoMeta({
     <!-- Main content -->
     <main class="min-w-0 flex-1 px-6 py-10 sm:px-12">
       <!-- Breadcrumb -->
-      <nav class="mb-8 flex items-center gap-1.5 text-xs text-text-muted">
+      <nav class="mb-8 flex items-center gap-1.5 text-sm text-text-muted">
         <NuxtLink
           to="/"
           class="text-text-muted hover:text-text-main no-underline"
@@ -136,7 +136,7 @@ useSeoMeta({
       <!-- Lesson header -->
       <div class="mb-4 flex items-center gap-2.5">
         <span
-          class="rounded px-2.5 py-1 text-[0.72rem] font-bold uppercase tracking-wider"
+          class="rounded px-2.5 py-1 text-[0.8rem] font-bold uppercase tracking-wider"
           :style="{
             color: weekColorMap[page.week],
             background: weekColorMap[page.week] + '14'
@@ -144,12 +144,12 @@ useSeoMeta({
         >
           Day {{ String(page.day).padStart(2, '0') }}
         </span>
-        <span class="text-xs text-text-muted">
+        <span class="text-sm text-text-muted">
           Week {{ page.week }} — {{ weekMeta.name }}
         </span>
       </div>
 
-      <h1 class="mb-8 font-display text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl">
+      <h1 class="mb-8 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
         {{ page.title }}
       </h1>
 
@@ -161,7 +161,7 @@ useSeoMeta({
       <!-- Mark as completed -->
       <div class="mt-12 max-w-[720px]">
         <button
-          class="group inline-flex items-center gap-2.5 rounded-lg border px-5 py-2.5 text-sm font-semibold transition-all duration-150 ease-smooth active:scale-[0.97]"
+          class="group inline-flex items-center gap-2.5 rounded-lg border px-5 py-2.5 text-base font-semibold transition-all duration-150 ease-smooth active:scale-[0.97]"
           :class="
             completed
               ? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/15'

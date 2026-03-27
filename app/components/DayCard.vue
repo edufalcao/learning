@@ -25,18 +25,18 @@ const completed = computed(() => isComplete(props.courseSlug, `day-${dayNum.valu
     :style="{ '--hover-color': weekColor === 'week1' ? '#3B82F6' : weekColor === 'week2' ? '#10B981' : weekColor === 'week3' ? '#8B5CF6' : '#FF006E' }"
   >
     <div
-      class="mb-1.5 flex items-center gap-1.5 text-[0.72rem] font-bold uppercase tracking-wider text-text-muted transition-colors duration-150 ease-smooth group-hover:text-[var(--hover-color)]"
+      class="mb-1.5 flex items-center gap-1.5 text-[0.8rem] font-bold uppercase tracking-wider text-text-muted transition-colors duration-150 ease-smooth group-hover:text-[var(--hover-color)]"
     >
       <span
         v-if="completed"
-        class="text-emerald-400 text-[0.65rem]"
+        class="text-emerald-400 text-[0.72rem]"
       >✓</span>
       Day {{ dayNum }}
     </div>
-    <div class="text-sm font-medium leading-snug text-text-main">
+    <div class="text-base font-medium leading-snug text-text-main">
       {{ title }}
     </div>
-    <span class="mt-2.5 inline-block rounded bg-surface-2 px-2 py-0.5 text-[0.68rem] text-text-muted">
+    <span class="mt-2.5 inline-block rounded bg-surface-2 px-2 py-0.5 text-[0.75rem] text-text-muted">
       {{ tag }}
     </span>
   </NuxtLink>

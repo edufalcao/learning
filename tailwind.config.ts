@@ -108,12 +108,12 @@ export default <Config>{
               border: '1px solid rgba(255,255,255,0.08)',
               borderRadius: '10px',
               padding: '1.25rem 1rem',
-              fontSize: '0.825rem',
+              fontSize: '0.875rem',
               lineHeight: '1.65'
             },
             'pre code': {
               fontFamily: 'JetBrains Mono, Fira Code, monospace',
-              fontSize: '0.825rem'
+              fontSize: '0.875rem'
             },
             'blockquote': {
               borderLeftColor: '#00E5CC',
