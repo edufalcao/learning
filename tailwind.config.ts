@@ -12,25 +12,25 @@ export default <Config>{
     extend: {
       colors: {
         'accent': {
-          DEFAULT: '#00E5CC',
-          dim: '#005C52',
-          glow: 'rgba(0,229,204,0.15)'
+          DEFAULT: 'var(--color-accent)',
+          dim: 'var(--color-accent-dim)',
+          glow: 'var(--glow-accent)'
         },
         'accent2': {
-          DEFAULT: '#FF006E',
-          dim: '#660029',
-          glow: 'rgba(255,0,110,0.15)'
+          DEFAULT: 'var(--color-accent-2)',
+          dim: 'var(--color-accent-2-dim)',
+          glow: 'var(--glow-accent-2)'
         },
-        'bg': '#0D0D0D',
+        'bg': 'var(--color-bg)',
         'surface': {
-          DEFAULT: '#1A1A1A',
-          2: '#242424'
+          DEFAULT: 'var(--color-surface)',
+          2: 'var(--color-elevated)'
         },
-        'border': 'hsla(0, 0%, 100%, 0.08)',
-        'text-main': '#F5F5F5',
-        'text-muted': '#8B8B8B',
-        'text-dim': '#999999',
-        'code-bg': '#1A1A1A',
+        'border': 'var(--color-border)',
+        'text-main': 'var(--color-text)',
+        'text-muted': 'var(--color-muted)',
+        'text-dim': 'var(--color-dim)',
+        'code-bg': 'var(--color-surface)',
         'week1': '#3B82F6',
         'week2': '#10B981',
         'week3': '#8B5CF6',
@@ -61,31 +61,31 @@ export default <Config>{
       typography: {
         DEFAULT: {
           css: {
-            '--tw-prose-body': '#C9C9C9',
-            '--tw-prose-headings': '#ffffff',
-            '--tw-prose-links': '#00E5CC',
-            '--tw-prose-bold': '#ffffff',
-            '--tw-prose-code': '#00E5CC',
-            '--tw-prose-pre-bg': '#1A1A1A',
-            '--tw-prose-pre-code': '#D4D4D4',
-            '--tw-prose-quotes': '#999999',
-            '--tw-prose-quote-borders': '#00E5CC',
-            '--tw-prose-counters': '#8B8B8B',
-            '--tw-prose-bullets': '#8B8B8B',
-            '--tw-prose-hr': 'hsla(0, 0%, 100%, 0.08)',
-            '--tw-prose-th-borders': 'hsla(0, 0%, 100%, 0.08)',
-            '--tw-prose-td-borders': 'hsla(0, 0%, 100%, 0.08)',
+            '--tw-prose-body': 'var(--color-prose-body)',
+            '--tw-prose-headings': 'var(--color-headings)',
+            '--tw-prose-links': 'var(--color-accent)',
+            '--tw-prose-bold': 'var(--color-headings)',
+            '--tw-prose-code': 'var(--color-accent)',
+            '--tw-prose-pre-bg': 'var(--color-surface)',
+            '--tw-prose-pre-code': 'var(--color-prose-body)',
+            '--tw-prose-quotes': 'var(--color-dim)',
+            '--tw-prose-quote-borders': 'var(--color-accent)',
+            '--tw-prose-counters': 'var(--color-muted)',
+            '--tw-prose-bullets': 'var(--color-muted)',
+            '--tw-prose-hr': 'var(--color-border)',
+            '--tw-prose-th-borders': 'var(--color-border)',
+            '--tw-prose-td-borders': 'var(--color-border)',
             'h2': {
-              color: '#ffffff',
+              color: 'var(--color-headings)',
               fontWeight: '700',
               letterSpacing: '-0.02em'
             },
             'h3': {
-              color: '#F5F5F5',
+              color: 'var(--color-text)',
               fontWeight: '600'
             },
             'a': {
-              'color': '#00E5CC',
+              'color': 'var(--color-accent)',
               'textDecoration': 'none',
               '&:hover': {
                 textDecoration: 'underline'
@@ -94,18 +94,18 @@ export default <Config>{
             'code:not(pre code)': {
               fontFamily: 'JetBrains Mono, Fira Code, monospace',
               fontSize: '0.82em',
-              background: 'rgba(255,255,255,0.06)',
-              border: '1px solid rgba(255,255,255,0.08)',
+              background: 'var(--color-code-inline-bg)',
+              border: '1px solid var(--color-border)',
               padding: '0.1em 0.35em',
               borderRadius: '4px',
-              color: '#00E5CC',
+              color: 'var(--color-accent)',
               fontWeight: '400'
             },
             'code::before': { content: 'none' },
             'code::after': { content: 'none' },
             'pre': {
-              background: '#1A1A1A',
-              border: '1px solid rgba(255,255,255,0.08)',
+              background: 'var(--color-surface)',
+              border: '1px solid var(--color-border)',
               borderRadius: '10px',
               padding: '1.25rem 1rem',
               fontSize: '0.875rem',
@@ -116,40 +116,40 @@ export default <Config>{
               fontSize: '0.875rem'
             },
             'blockquote': {
-              borderLeftColor: '#00E5CC',
-              background: 'rgba(0,229,204,0.05)',
+              borderLeftColor: 'var(--color-accent)',
+              background: 'var(--color-blockquote-bg)',
               padding: '1rem 1.25rem',
               borderRadius: '0 8px 8px 0',
               fontStyle: 'normal'
             },
             'blockquote p': {
-              color: '#F5F5F5'
+              color: 'var(--color-text)'
             },
             'table': {
               fontSize: '0.85rem'
             },
             'thead tr': {
-              borderBottomColor: 'rgba(255,255,255,0.08)'
+              borderBottomColor: 'var(--color-border)'
             },
             'th': {
-              color: '#999999',
+              color: 'var(--color-dim)',
               fontWeight: '600',
               fontSize: '0.78rem',
               textTransform: 'uppercase',
               letterSpacing: '0.05em'
             },
             'td': {
-              borderBottomColor: 'rgba(255,255,255,0.08)'
+              borderBottomColor: 'var(--color-border)'
             },
             'hr': {
-              borderColor: 'rgba(255,255,255,0.08)'
+              borderColor: 'var(--color-border)'
             },
             'strong': {
-              color: '#ffffff',
+              color: 'var(--color-headings)',
               fontWeight: '600'
             },
             'em': {
-              color: '#999999'
+              color: 'var(--color-dim)'
             }
           }
         }

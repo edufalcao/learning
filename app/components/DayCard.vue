@@ -18,7 +18,7 @@ const completed = computed(() => isComplete(props.courseSlug, `day-${dayNum.valu
 <template>
   <NuxtLink
     :to="`/${courseSlug}/day-${dayNum}`"
-    class="group block rounded-xl border bg-surface p-4 no-underline transition-all duration-150 ease-smooth hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40"
+    class="group block rounded-xl border bg-surface p-4 no-underline transition-all duration-150 ease-smooth hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[var(--shadow-color)]"
     :class="[
       isReview ? 'border-dashed border-border' : 'border-border'
     ]"

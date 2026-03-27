@@ -63,7 +63,7 @@ function daySlug(day: number) {
         :class="
           d.day === currentDay
             ? 'border-r-accent bg-accent/5 text-accent'
-            : 'border-r-transparent text-text-muted hover:bg-white/[0.03] hover:text-text-main'
+            : 'border-r-transparent text-text-muted hover:bg-text-muted/5 hover:text-text-main'
         "
       >
         <span

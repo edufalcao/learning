@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
+    '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss'
   ],
 
@@ -30,6 +31,12 @@ export default defineNuxtConfig({
       ]
     },
     pageTransition: { name: 'page', mode: 'out-in' }
+  },
+
+  colorMode: {
+    classSuffix: '',
+    preference: 'dark',
+    fallback: 'dark'
   },
 
   content: {

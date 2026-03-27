@@ -79,7 +79,7 @@ useSeoMeta({
         {{ course.lessons }} lessons · Eduardo Falcão
       </div>
 
-      <h1 class="mb-5 font-display text-5xl font-extrabold leading-tight tracking-tight text-white sm:text-6xl">
+      <h1 class="mb-5 font-display text-5xl font-extrabold leading-tight tracking-tight text-[var(--color-headings)] sm:text-6xl">
         {{ course.title.replace('30 Days of ', '30 Days of\n').split('\n')[0] }}<br>
         <span :style="{ color: course.color }">
           {{ course.title.replace('30 Days of ', '').trim() || course.title }}

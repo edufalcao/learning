@@ -37,7 +37,7 @@ useSeoMeta({
         Learning Hub
       </div>
 
-      <h1 class="mb-5 font-display text-5xl font-extrabold leading-tight tracking-tight text-white sm:text-6xl">
+      <h1 class="mb-5 font-display text-5xl font-extrabold leading-tight tracking-tight text-[var(--color-headings)] sm:text-6xl">
         Eduardo Falcão<br>
         <span class="gradient-text">Learning Hub</span>
       </h1>
@@ -58,7 +58,7 @@ useSeoMeta({
           v-for="course in courses"
           :key="course.slug"
           :to="`/${course.slug}/`"
-          class="group relative block overflow-hidden rounded-xl border border-border bg-surface p-6 no-underline transition-all duration-150 ease-smooth hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40 hover-glow"
+          class="group relative block overflow-hidden rounded-xl border border-border bg-surface p-6 no-underline transition-all duration-150 ease-smooth hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[var(--shadow-color)] hover-glow"
           :style="{ '--course-color': course.color }"
         >
           <!-- Accent stripe -->
@@ -86,13 +86,13 @@ useSeoMeta({
               </span>
               <span
                 v-else-if="courseProgress[course.slug] === 0"
-                class="inline-flex items-center rounded-full bg-white/5 px-2 py-0.5 text-[0.72rem] font-medium text-text-muted"
+                class="inline-flex items-center rounded-full bg-text-muted/10 px-2 py-0.5 text-[0.72rem] font-medium text-text-muted"
               >
                 Start learning
               </span>
             </div>
 
-            <h3 class="mb-2 font-display text-xl font-bold leading-snug text-white transition-colors duration-150 ease-smooth group-hover:text-[var(--course-color)]">
+            <h3 class="mb-2 font-display text-xl font-bold leading-snug text-[var(--color-headings)] transition-colors duration-150 ease-smooth group-hover:text-[var(--course-color)]">
               {{ course.title }}
             </h3>
 

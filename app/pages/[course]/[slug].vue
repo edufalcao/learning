@@ -149,12 +149,12 @@ useSeoMeta({
         </span>
       </div>
 
-      <h1 class="mb-8 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
+      <h1 class="mb-8 font-display text-4xl font-extrabold leading-tight tracking-tight text-[var(--color-headings)] sm:text-5xl">
         {{ page.title }}
       </h1>
 
       <!-- Prose content -->
-      <div class="prose prose-invert max-w-[720px]">
+      <div class="prose max-w-[720px]">
         <ContentRenderer :value="page" />
       </div>
 
