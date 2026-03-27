@@ -10,17 +10,17 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      title: 'Eduardo Falcão — Learning Hub',
+      title: 'Eduardo Falcão — learning hub',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'Structured learning series on software engineering & AI. By Eduardo Falcão.' },
-        { property: 'og:title', content: 'Eduardo Falcão — Learning Hub' },
+        { property: 'og:title', content: 'Eduardo Falcão — learning hub' },
         { property: 'og:description', content: 'Structured learning series on software engineering & AI.' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://learning.edufalcao.com' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Eduardo Falcão — Learning Hub' },
+        { name: 'twitter:title', content: 'Eduardo Falcão — learning hub' },
         { name: 'twitter:description', content: 'Structured learning series on software engineering & AI.' }
       ],
       link: [

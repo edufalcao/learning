@@ -17,11 +17,11 @@ onMounted(() => {
 });
 
 useHead({
-  title: 'Eduardo Falcão — Learning Hub'
+  title: 'Eduardo Falcão — learning hub'
 });
 
 useSeoMeta({
-  ogTitle: 'Eduardo Falcão — Learning Hub',
+  ogTitle: 'Eduardo Falcão — learning hub',
   ogDescription: 'Structured learning series on software engineering & AI.'
 });
 </script>
@@ -34,12 +34,12 @@ useSeoMeta({
         class="mx-auto mb-6 inline-flex items-center gap-1.5 rounded-full border border-accent/20 bg-accent/10 px-3 py-1 text-[0.85rem] tracking-wide text-accent"
       >
         <span class="text-[0.55rem]">●</span>
-        Learning Hub
+        learning hub
       </div>
 
       <h1 class="mb-5 font-display text-5xl font-extrabold leading-tight tracking-tight text-[var(--color-headings)] sm:text-6xl">
         Eduardo Falcão<br>
-        <span class="gradient-text">Learning Hub</span>
+        <span class="gradient-text">learning hub</span>
       </h1>
 
       <p class="mx-auto mb-12 max-w-[540px] text-lg leading-relaxed text-text-muted sm:text-xl">
