@@ -68,7 +68,7 @@ const weekColorMap: Record<number, string> = {
   1: '#3B82F6',
   2: '#10B981',
   3: '#8B5CF6',
-  4: '#F59E0B',
+  4: '#00E5CC',
 }
 
 const prevDay = computed(() => {
@@ -142,15 +142,15 @@ useSeoMeta({
       <div class="mt-12 max-w-[720px]">
         <button
           @click="toggleComplete"
-          class="group inline-flex items-center gap-2.5 rounded-lg border px-5 py-2.5 text-sm font-semibold transition-all duration-200 active:scale-[0.97]"
+          class="group inline-flex items-center gap-2.5 rounded-lg border px-5 py-2.5 text-sm font-semibold transition-all duration-150 ease-smooth active:scale-[0.97]"
           :class="
             completed
               ? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/15'
-              : 'border-brand/30 bg-brand/10 text-brand hover:bg-brand/15'
+              : 'border-accent/30 bg-accent/10 text-accent hover:bg-accent/15'
           "
         >
           <span
-            class="flex h-5 w-5 items-center justify-center rounded-full transition-all duration-200"
+            class="flex h-5 w-5 items-center justify-center rounded-full transition-all duration-150 ease-smooth"
             :class="
               completed
                 ? 'bg-emerald-500 text-white'

@@ -10,7 +10,7 @@ const weekColorMap: Record<string, string> = {
   week1: '#3B82F6',
   week2: '#10B981',
   week3: '#8B5CF6',
-  week4: '#F59E0B',
+  week4: '#00E5CC',
 }
 </script>
 

@@ -19,7 +19,7 @@ const weekColorMap: Record<number, string> = {
   1: '#3B82F6',
   2: '#10B981',
   3: '#8B5CF6',
-  4: '#F59E0B',
+  4: '#00E5CC',
 }
 
 const weeks = computed(() => {
@@ -55,14 +55,14 @@ function daySlug(day: number) {
         v-for="d in week.days"
         :key="d.day"
         :to="daySlug(d.day)"
-        class="flex items-center gap-2 border-r-2 px-4 py-1.5 text-[0.82rem] no-underline transition-all duration-100"
+        class="flex items-center gap-2 border-r-2 px-4 py-1.5 text-[0.82rem] no-underline transition-all duration-150 ease-smooth"
         :class="
           d.day === currentDay
-            ? 'border-r-brand bg-brand/5 text-brand'
+            ? 'border-r-accent bg-accent/5 text-accent'
             : 'border-r-transparent text-text-muted hover:bg-white/[0.03] hover:text-text-main'
         "
       >
-        <span class="flex min-w-[28px] items-center gap-1 text-[0.7rem]" :class="d.day === currentDay ? 'text-brand/70' : 'text-text-muted'">
+        <span class="flex min-w-[28px] items-center gap-1 text-[0.7rem]" :class="d.day === currentDay ? 'text-accent/70' : 'text-text-muted'">
           <span v-if="isDayComplete(d.day)" class="text-emerald-400 text-[0.6rem]">&#10003;</span>
           {{ String(d.day).padStart(2, '0') }}
         </span>

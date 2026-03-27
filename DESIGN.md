@@ -58,23 +58,25 @@ agentic-coding-site/
 
 ### Identidade visual
 - **Tema:** Dark (developer-first)
-- **Cor primária:** Âmbar/laranja (`#F59E0B`) — contraste forte, remete a terminal
-- **Background:** `#0A0A0A` (quase preto, não puro)
-- **Surface cards:** `#111111` com borda `#222`
-- **Fonte texto:** Inter (system-ui fallback)
+- **Cor primária:** Ciano (`#00E5CC`) + Magenta (`#FF006E`) — mesma identidade visual do personal-website, diffspot e configspot
+- **Background:** `#0D0D0D` (quase preto, não puro)
+- **Surface cards:** `#1A1A1A` com borda `rgba(255,255,255,0.08)`
+- **Fonte texto:** DM Sans (system-ui fallback)
+- **Fonte display:** Space Grotesk
 - **Fonte código:** JetBrains Mono
 
 ### Paleta
 | Token | Valor |
 |-------|-------|
-| `brand` | `#F59E0B` |
-| `brand-dim` | `#78350F` |
-| `bg` | `#0A0A0A` |
-| `surface` | `#111111` |
-| `border` | `#222222` |
-| `text` | `#E5E5E5` |
-| `text-muted` | `#666666` |
-| `code-bg` | `#161616` |
+| `accent` | `#00E5CC` |
+| `accent2` | `#FF006E` |
+| `bg` | `#0D0D0D` |
+| `surface` | `#1A1A1A` |
+| `surface-2` | `#242424` |
+| `border` | `hsla(0, 0%, 100%, 0.08)` |
+| `text-main` | `#F5F5F5` |
+| `text-muted` | `#8B8B8B` |
+| `code-bg` | `#1A1A1A` |
 
 ### Tipografia
 - `text-sm` muted para metadados (dia, semana)
@@ -185,4 +187,4 @@ learning.edufalcao.com → CNAME → <pages-project>.pages.dev
 | Sidebar navigation | Topnav only | 30 dias precisam de acesso rápido |
 | Nuxt Content | MDX manual | Zero boilerplate, highlight built-in |
 | Cloudflare Pages | Vercel | Já no ecossistema Cloudflare do Eduardo |
-| Âmbar como cor primária | Azul/verde | Diferencia, remete a terminal |
+| Ciano + Magenta como cores primárias | Azul/verde | Consistência com personal-website, diffspot e configspot |

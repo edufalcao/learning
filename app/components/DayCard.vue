@@ -18,15 +18,14 @@ const completed = computed(() => isComplete(props.courseSlug, `day-${dayNum.valu
 <template>
   <NuxtLink
     :to="`/${courseSlug}/day-${dayNum}`"
-    class="group block rounded-xl border bg-surface p-4 no-underline transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40"
+    class="group block rounded-xl border bg-surface p-4 no-underline transition-all duration-150 ease-smooth hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40"
     :class="[
       isReview ? 'border-dashed border-border' : 'border-border',
-      `hover:border-${weekColor}`,
     ]"
-    :style="{ '--hover-color': weekColor === 'week1' ? '#3B82F6' : weekColor === 'week2' ? '#10B981' : weekColor === 'week3' ? '#8B5CF6' : '#F59E0B' }"
+    :style="{ '--hover-color': weekColor === 'week1' ? '#3B82F6' : weekColor === 'week2' ? '#10B981' : weekColor === 'week3' ? '#8B5CF6' : '#00E5CC' }"
   >
     <div
-      class="mb-1.5 flex items-center gap-1.5 text-[0.72rem] font-bold uppercase tracking-wider text-text-muted transition-colors group-hover:text-[var(--hover-color)]"
+      class="mb-1.5 flex items-center gap-1.5 text-[0.72rem] font-bold uppercase tracking-wider text-text-muted transition-colors duration-150 ease-smooth group-hover:text-[var(--hover-color)]"
     >
       <span v-if="completed" class="text-emerald-400 text-[0.65rem]">✓</span>
       Day {{ dayNum }}

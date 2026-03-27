@@ -1,7 +1,7 @@
 title: "30 Days of Agentic Coding"
 description: "A structured series on building agent systems — from mental models to production."
 slug: agentic-coding
-color: "#F59E0B"
+color: "#00E5CC"
 lessons: 30
 weeks:
   - number: 1
@@ -19,4 +19,4 @@ weeks:
   - number: 4
     name: "Production"
     subtitle: "Advanced & Real-World"
-    color: "#F59E0B"
+    color: "#00E5CC"

@@ -31,7 +31,7 @@ useSeoMeta({
     <!-- Hero -->
     <section class="mx-auto max-w-[820px] px-8 pb-16 pt-20 text-center">
       <div
-        class="mx-auto mb-6 inline-flex items-center gap-1.5 rounded-full border border-brand/20 bg-brand/10 px-3 py-1 text-[0.78rem] tracking-wide text-brand"
+        class="mx-auto mb-6 inline-flex items-center gap-1.5 rounded-full border border-accent/20 bg-accent/10 px-3 py-1 text-[0.78rem] tracking-wide text-accent"
       >
         <span class="text-[0.5rem]">●</span>
         Learning Hub
@@ -39,7 +39,7 @@ useSeoMeta({
 
       <h1 class="mb-5 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
         Eduardo Falcão<br />
-        <span class="text-brand">Learning Hub</span>
+        <span class="gradient-text">Learning Hub</span>
       </h1>
 
       <p class="mx-auto mb-12 max-w-[540px] text-base leading-relaxed text-text-muted sm:text-lg">
@@ -56,12 +56,12 @@ useSeoMeta({
           v-for="course in courses"
           :key="course.slug"
           :to="`/${course.slug}/`"
-          class="group relative block overflow-hidden rounded-xl border border-border bg-surface p-6 no-underline transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40"
+          class="group relative block overflow-hidden rounded-xl border border-border bg-surface p-6 no-underline transition-all duration-150 ease-smooth hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40 hover-glow"
           :style="{ '--course-color': course.color }"
         >
           <!-- Accent stripe -->
           <div
-            class="absolute inset-x-0 top-0 h-1 transition-all duration-200 group-hover:h-1.5"
+            class="absolute inset-x-0 top-0 h-1 transition-all duration-150 ease-smooth group-hover:h-1.5"
             :style="{ background: course.color }"
           />
 
@@ -90,7 +90,7 @@ useSeoMeta({
               </span>
             </div>
 
-            <h3 class="mb-2 font-display text-lg font-bold leading-snug text-white transition-colors group-hover:text-[var(--course-color)]">
+            <h3 class="mb-2 font-display text-lg font-bold leading-snug text-white transition-colors duration-150 ease-smooth group-hover:text-[var(--course-color)]">
               {{ course.title }}
             </h3>
 

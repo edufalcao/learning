@@ -115,8 +115,8 @@ Automatic via GitHub Actions on push to `main`. The workflow:
 ## Design
 
 - **Theme:** Dark, developer-first
-- **Accent:** Amber (`#F59E0B`)
-- **Typography:** Space Grotesk (headings) + Outfit (body) + JetBrains Mono (code)
+- **Accent:** Cyan (`#00E5CC`) + Magenta (`#FF006E`)
+- **Typography:** Space Grotesk (headings) + DM Sans (body) + JetBrains Mono (code)
 - **Code blocks:** Shiki `github-dark` theme with copy button
 - **Responsive:** Mobile-first, 2-column layout on desktop (sidebar + content)
 
