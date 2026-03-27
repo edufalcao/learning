@@ -1,6 +1,6 @@
-# 📖 Learning Hub
+# learning hub
 
-A static site hosting structured learning series on software engineering and AI. Built with Nuxt 3 and deployed to Cloudflare Pages.
+A static site hosting structured learning series on software engineering and AI. Built with Nuxt 4 and deployed to Cloudflare Pages.
 
 **Live:** [learning.edufalcao.com](https://learning.edufalcao.com)
 
@@ -21,9 +21,9 @@ Topics include: the agent loop, tools & function calling, context management, me
 
 ## Stack
 
-- **[Nuxt 4](https://nuxt.com)** — Vue framework with static generation (`nuxt generate`)
+- **[Nuxt 4](https://nuxt.com)** — Vue 3 framework with static generation (`nuxt generate`)
 - **[@nuxt/content](https://content.nuxt.com)** — Markdown-driven content, auto-routing, Shiki syntax highlighting
-- **[Tailwind CSS](https://tailwindcss.com)** — Utility-first styling
+- **[Tailwind CSS 3](https://tailwindcss.com)** — Utility-first styling (via `@nuxtjs/tailwindcss`)
 - **[Cloudflare Pages](https://pages.cloudflare.com)** — Static hosting with automatic deployments
 
 ## Project Structure
@@ -98,6 +98,10 @@ pnpm generate
 
 # Preview static build
 pnpm preview
+
+# Lint and typecheck
+pnpm lint
+pnpm typecheck
 ```
 
 ## Deployment
