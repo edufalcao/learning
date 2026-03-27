@@ -119,8 +119,5 @@ useSeoMeta({
         </NuxtLink>
       </div>
     </section>
-
-    <!-- Footer -->
-    <SiteFooter />
   </div>
 </template>

@@ -127,8 +127,5 @@ useSeoMeta({
         :course-slug="courseSlug"
       />
     </section>
-
-    <!-- Footer -->
-    <SiteFooter />
   </div>
 </template>
