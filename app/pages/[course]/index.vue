@@ -15,13 +15,8 @@ onMounted(() => {
   completedSlugs.value = getCompletedSlugs(courseSlug.value);
 });
 
-// Map course slugs to collection names
-const collectionMap: Record<string, string> = {
-  'agentic-coding': 'agentic_coding',
-  'systems-design-ai-native': 'systems_design_ai_native'
-};
-
-const collectionName = computed(() => collectionMap[courseSlug.value] || courseSlug.value);
+// Auto-convert slug to collection name (hyphens → underscores)
+const collectionName = computed(() => courseSlug.value.replace(/-/g, '_'));
 
 // Fetch course metadata
 const { data: allCourses } = await useAsyncData(`course-meta-${courseSlug.value}`, () =>
