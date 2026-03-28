@@ -6,6 +6,7 @@ export default defineContentConfig({
       type: 'data',
       source: 'courses/*.yml',
       schema: z.object({
+        order: z.number().optional(),
         title: z.string(),
         description: z.string(),
         slug: z.string(),

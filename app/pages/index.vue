@@ -2,7 +2,7 @@
 import { useProgress } from '~/composables/useProgress';
 
 const { data: courses } = await useAsyncData('all-courses', () =>
-  queryCollection('courses').all()
+  queryCollection('courses').order('order', 'ASC').all()
 );
 
 const { getCompletedCount } = useProgress();

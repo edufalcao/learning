@@ -1,3 +1,4 @@
+order: 2
 title: "Systems Design for AI-Native Apps"
 description: "Master the architectural patterns, trade-offs, and engineering practices to build reliable, scalable, production-grade AI-native applications."
 slug: systems-design-ai-native
