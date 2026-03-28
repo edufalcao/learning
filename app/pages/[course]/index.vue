@@ -52,7 +52,7 @@ const days = computed<DayInfo[]>(() =>
   }))
 );
 
-const weeks = computed(() => groupByWeek(days.value));
+const weeks = computed(() => groupByWeek(days.value, course.value?.weeks));
 
 useHead({
   title: () => course.value ? `${course.value.title} — Eduardo Falcão` : 'Course'
@@ -81,10 +81,13 @@ useSeoMeta({
       </div>
 
       <h1 class="mb-5 font-display text-5xl font-extrabold leading-tight tracking-tight text-[var(--color-headings)] sm:text-6xl">
-        {{ course.title.replace('30 Days of ', '30 Days of\n').split('\n')[0] }}<br>
-        <span :style="{ color: course.color }">
-          {{ course.title.replace('30 Days of ', '').trim() || course.title }}
-        </span>
+        <template v-if="course.title.includes('30 Days of')">
+          {{ course.title.split('30 Days of')[0] }}30 Days of<br>
+          <span :style="{ color: course.color }">{{ (course.title.split('30 Days of')[1] ?? '').trim() }}</span>
+        </template>
+        <template v-else>
+          <span :style="{ color: course.color }">{{ course.title }}</span>
+        </template>
       </h1>
 
       <p class="mx-auto mb-10 max-w-[540px] text-lg leading-relaxed text-text-muted sm:text-xl">
