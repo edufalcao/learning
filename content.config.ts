@@ -30,6 +30,18 @@ export default defineContentConfig({
         description: z.string(),
         tag: z.string()
       })
+    }),
+    systems_design_ai_native: defineCollection({
+      type: 'page',
+      source: 'systems-design-ai-native/*.md',
+      schema: z.object({
+        title: z.string(),
+        day: z.number(),
+        week: z.number(),
+        weekName: z.string(),
+        description: z.string(),
+        tag: z.string()
+      })
     })
   }
 });

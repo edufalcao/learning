@@ -17,7 +17,8 @@ onMounted(() => {
 
 // Map course slugs to collection names
 const collectionMap: Record<string, string> = {
-  'agentic-coding': 'agentic_coding'
+  'agentic-coding': 'agentic_coding',
+  'systems-design-ai-native': 'systems_design_ai_native'
 };
 
 const collectionName = computed(() => collectionMap[courseSlug.value] || courseSlug.value);
