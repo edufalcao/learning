@@ -4,7 +4,7 @@ day: 13
 week: 2
 weekName: "Data & Context"
 description: "Why caching LLM outputs is hard (and worth it)"
-tag: "data-context"
+tag: "Data & Context"
 ---
 
 # Day 13 — Caching Strategies for LLM Responses

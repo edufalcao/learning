@@ -4,7 +4,7 @@ day: 16
 week: 3
 weekName: "Reliability"
 description: "Retry logic: exponential backoff, jitter, max attempts"
-tag: "reliability"
+tag: "Reliability"
 ---
 
 # Day 16 — Retry Strategies, Fallbacks, and Circuit Breakers for LLMs

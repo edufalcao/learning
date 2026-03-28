@@ -4,7 +4,7 @@ day: 12
 week: 2
 weekName: "Data & Context"
 description: "Stream processing vs batch processing for AI"
-tag: "data-context"
+tag: "Data & Context"
 ---
 
 # Day 12 — Streaming Data Pipelines for Real-Time AI Features

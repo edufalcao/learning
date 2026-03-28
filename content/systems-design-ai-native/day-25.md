@@ -4,7 +4,7 @@ day: 25
 week: 4
 weekName: "Multi-Agent & Production"
 description: "Prompt injection: attack vectors and defenses"
-tag: "multi-agent"
+tag: "Multi-Agent & Production"
 ---
 
 # Day 25 — Security in AI Systems

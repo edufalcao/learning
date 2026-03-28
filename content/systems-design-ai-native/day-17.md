@@ -4,7 +4,7 @@ day: 17
 week: 3
 weekName: "Reliability"
 description: "What to log in an AI system (and what not to)"
-tag: "reliability"
+tag: "Reliability"
 ---
 
 # Day 17 — Structured Logging and Tracing for AI Pipelines

@@ -4,7 +4,7 @@ day: 15
 week: 3
 weekName: "Reliability"
 description: "Taxonomy of AI failures: hallucination, refusals, regressions, timeouts"
-tag: "reliability"
+tag: "Reliability"
 ---
 
 # Day 15 — Failure Modes in AI Systems

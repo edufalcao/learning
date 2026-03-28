@@ -4,7 +4,7 @@ day: 7
 week: 1
 weekName: "Foundations"
 description: "Review: the 6 core decisions of any AI-native system"
-tag: "foundations"
+tag: "Foundations"
 ---
 
 # Day 7 — Week 1 Synthesis: Your AI-Native Architecture Checklist

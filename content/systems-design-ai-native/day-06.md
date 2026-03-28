@@ -4,7 +4,7 @@ day: 6
 week: 1
 weekName: "Foundations"
 description: "The statefulness problem: agents need memory across calls"
-tag: "foundations"
+tag: "Foundations"
 ---
 
 # Day 6 — State Management in Agentic Systems

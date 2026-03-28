@@ -4,7 +4,7 @@ day: 10
 week: 2
 weekName: "Data & Context"
 description: "How vector similarity search works (HNSW, IVF)"
-tag: "data-context"
+tag: "Data & Context"
 ---
 
 # Day 10 — Vector Databases: Choosing, Indexing, and Querying

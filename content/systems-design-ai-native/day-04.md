@@ -4,7 +4,7 @@ day: 4
 week: 1
 weekName: "Foundations"
 description: "The problem with blocking on LLM calls"
-tag: "foundations"
+tag: "Foundations"
 ---
 
 # Day 4 — Async-First Design: Why Sync Patterns Fail with AI

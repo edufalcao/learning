@@ -4,7 +4,7 @@ day: 14
 week: 2
 weekName: "Data & Context"
 description: "Decision tree: RAG vs fine-tuning vs in-context learning"
-tag: "data-context"
+tag: "Data & Context"
 ---
 
 # Day 14 — Week 2 Synthesis: Designing Your Data Layer

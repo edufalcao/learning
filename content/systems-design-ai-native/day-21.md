@@ -4,7 +4,7 @@ day: 21
 week: 3
 weekName: "Reliability"
 description: "SLO definition for AI-native apps"
-tag: "reliability"
+tag: "Reliability"
 ---
 
 # Day 21 — Week 3 Synthesis: Your Reliability Playbook

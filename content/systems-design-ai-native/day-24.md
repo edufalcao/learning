@@ -4,7 +4,7 @@ day: 24
 week: 4
 weekName: "Multi-Agent & Production"
 description: "When to interrupt for human input"
-tag: "multi-agent"
+tag: "Multi-Agent & Production"
 ---
 
 # Day 24 — Human-in-the-Loop Design Patterns

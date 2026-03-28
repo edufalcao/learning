@@ -4,7 +4,7 @@ day: 11
 week: 2
 weekName: "Data & Context"
 description: "The 4 types of memory in agentic systems"
-tag: "data-context"
+tag: "Data & Context"
 ---
 
 # Day 11 — Memory Systems: Short-Term, Long-Term, Episodic

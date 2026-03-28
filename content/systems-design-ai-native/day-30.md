@@ -4,7 +4,7 @@ day: 30
 week: 4
 weekName: "Multi-Agent & Production"
 description: "Synthesis: your personal framework for AI-native design"
-tag: "multi-agent"
+tag: "Multi-Agent & Production"
 ---
 
 # Day 30 — Your Personal AI-Native Systems Design Blueprint

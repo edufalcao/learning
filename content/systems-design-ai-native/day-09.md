@@ -4,7 +4,7 @@ day: 9
 week: 2
 weekName: "Data & Context"
 description: "Why RAG exists and when to use it"
-tag: "data-context"
+tag: "Data & Context"
 ---
 
 # Day 9 — RAG Architecture Deep Dive

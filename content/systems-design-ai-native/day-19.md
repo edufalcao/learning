@@ -4,7 +4,7 @@ day: 19
 week: 3
 weekName: "Reliability"
 description: "Cost attribution: per-user, per-feature, per-pipeline"
-tag: "reliability"
+tag: "Reliability"
 ---
 
 # Day 19 — Cost Control: Monitoring and Optimizing LLM Spend

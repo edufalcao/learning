@@ -4,7 +4,7 @@ day: 27
 week: 4
 weekName: "Multi-Agent & Production"
 description: "Versioning prompts, models, and pipelines together"
-tag: "multi-agent"
+tag: "Multi-Agent & Production"
 ---
 
 # Day 27 — Versioning and Rollback for AI-Native Systems

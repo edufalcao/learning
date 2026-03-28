@@ -4,7 +4,7 @@ day: 8
 week: 2
 weekName: "Data & Context"
 description: "Context window economics: cost vs quality vs latency"
-tag: "data-context"
+tag: "Data & Context"
 ---
 
 # Day 8 — Context Windows as a Resource: Strategies and Patterns

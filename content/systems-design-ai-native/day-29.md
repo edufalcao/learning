@@ -4,7 +4,7 @@ day: 29
 week: 4
 weekName: "Multi-Agent & Production"
 description: "Apply everything: architecture review of hawkbot-mission-control"
-tag: "multi-agent"
+tag: "Multi-Agent & Production"
 ---
 
 # Day 29 — Case Study: Designing hawkbot-mission-control as an AI-Native System

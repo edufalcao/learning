@@ -4,7 +4,7 @@ day: 20
 week: 3
 weekName: "Reliability"
 description: "Provider-side rate limits: TPM, RPM, daily quotas"
-tag: "reliability"
+tag: "Reliability"
 ---
 
 # Day 20 — Rate Limiting and Quota Management

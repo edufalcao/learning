@@ -4,7 +4,7 @@ day: 2
 week: 1
 weekName: "Foundations"
 description: "Anatomy of an LLM API call: tokens, pricing, latency breakdown"
-tag: "foundations"
+tag: "Foundations"
 ---
 
 # Day 2 — LLMs as a Service: Latency, Cost, and Reliability Trade-offs

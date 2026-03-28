@@ -4,7 +4,7 @@ day: 5
 week: 1
 weekName: "Foundations"
 description: "Why events are a natural fit for AI workflows"
-tag: "foundations"
+tag: "Foundations"
 ---
 
 # Day 5 — Event-Driven Architecture for AI Pipelines

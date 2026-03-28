@@ -4,7 +4,7 @@ day: 3
 week: 1
 weekName: "Foundations"
 description: "Treating prompts as first-class artifacts"
-tag: "foundations"
+tag: "Foundations"
 ---
 
 # Day 3 — Prompt as Code: Versioning, Testing, and Deployment

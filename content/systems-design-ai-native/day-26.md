@@ -4,7 +4,7 @@ day: 26
 week: 4
 weekName: "Multi-Agent & Production"
 description: "When to run inference at the edge"
-tag: "multi-agent"
+tag: "Multi-Agent & Production"
 ---
 
 # Day 26 — Deployment Patterns: Edge vs Cloud vs Hybrid

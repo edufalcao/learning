@@ -4,7 +4,7 @@ day: 23
 week: 4
 weekName: "Multi-Agent & Production"
 description: "Tool use as the agent communication primitive"
-tag: "multi-agent"
+tag: "Multi-Agent & Production"
 ---
 
 # Day 23 — Agent Communication: Tools, Handoffs, Shared Memory

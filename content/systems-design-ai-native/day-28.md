@@ -4,7 +4,7 @@ day: 28
 week: 4
 weekName: "Multi-Agent & Production"
 description: "The observability stack for AI: logs, metrics, traces, evals"
-tag: "multi-agent"
+tag: "Multi-Agent & Production"
 ---
 
 # Day 28 — Building for Observability from Day 1

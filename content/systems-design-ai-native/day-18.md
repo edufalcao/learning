@@ -4,7 +4,7 @@ day: 18
 week: 3
 weekName: "Reliability"
 description: "Why traditional testing is insufficient for AI"
-tag: "reliability"
+tag: "Reliability"
 ---
 
 # Day 18 — Evaluations (Evals): Testing AI Behavior at Scale

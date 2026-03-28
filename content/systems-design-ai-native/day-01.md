@@ -4,7 +4,7 @@ day: 1
 week: 1
 weekName: "Foundations"
 description: "Mental model shift: LLM as infrastructure, not a feature"
-tag: "foundations"
+tag: "Foundations"
 ---
 
 # Day 1 — What Makes an App "AI-Native"?

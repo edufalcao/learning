@@ -4,7 +4,7 @@ day: 22
 week: 4
 weekName: "Multi-Agent & Production"
 description: "Supervisor, pipeline, peer-to-peer, and marketplace patterns"
-tag: "multi-agent"
+tag: "Multi-Agent & Production"
 ---
 
 # Day 22 — Multi-Agent Orchestration Patterns
