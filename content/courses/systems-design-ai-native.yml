@@ -1,0 +1,22 @@
+title: "Systems Design for AI-Native Apps"
+description: "Master the architectural patterns, trade-offs, and engineering practices to build reliable, scalable, production-grade AI-native applications."
+slug: systems-design-ai-native
+color: "#6366F1"
+lessons: 30
+weeks:
+  - number: 1
+    name: "Foundations"
+    subtitle: "Thinking in AI-Native"
+    color: "#6366F1"
+  - number: 2
+    name: "Data & Context"
+    subtitle: "Data & Context Management"
+    color: "#10B981"
+  - number: 3
+    name: "Reliability"
+    subtitle: "Reliability, Observability & Cost"
+    color: "#F59E0B"
+  - number: 4
+    name: "Multi-Agent & Production"
+    subtitle: "Multi-Agent Patterns & Production"
+    color: "#EF4444"
