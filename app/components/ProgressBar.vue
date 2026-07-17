@@ -10,6 +10,10 @@ const total = computed(() => props.totalLessons || 30);
 const completedCount = computed(() => props.completed || 0);
 const percent = computed(() => total.value > 0 ? Math.round((completedCount.value / total.value) * 100) : 0);
 const fillWidth = computed(() => total.value > 0 ? (completedCount.value / total.value) * 100 : 0);
+const progressBackground = computed(() => {
+  const colors = props.weeks?.map(week => week.color) ?? ['#3B82F6', '#10B981', '#8B5CF6', '#FF006E'];
+  return `linear-gradient(to right, ${colors.join(', ')})`;
+});
 
 // Build a set of completed day indices (0-based) from slugs like "day-01"
 const completedIndices = computed(() => {
@@ -63,8 +67,8 @@ const days = computed(() => {
     </div>
     <div class="h-1 overflow-hidden rounded-full bg-border">
       <div
-        class="h-full rounded-full bg-gradient-to-r from-week1 via-week2 via-week3 to-week4 transition-all duration-500"
-        :style="{ width: fillWidth + '%' }"
+        class="h-full rounded-full transition-all duration-500"
+        :style="{ width: fillWidth + '%', background: progressBackground }"
       />
     </div>
     <div class="mt-3 flex gap-0.5">

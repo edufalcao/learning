@@ -20,7 +20,8 @@ const weekColors: Record<number, string> = {
   1: 'week1',
   2: 'week2',
   3: 'week3',
-  4: 'week4'
+  4: 'week4',
+  5: 'week5'
 };
 
 export function getWeekMeta(weekNum: number): { name: string, subtitle: string, color: string } {

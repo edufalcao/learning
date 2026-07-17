@@ -27,12 +27,32 @@ function toggleComplete() {
   }
 }
 
-// Map course slugs to collection names
-const collectionMap: Record<string, string> = {
-  'agentic-coding': 'agentic_coding'
-};
+function queryLesson(course: string, lesson: string) {
+  const path = `/${course}/${lesson}`;
+  switch (course) {
+    case 'agentic-coding':
+      return queryCollection('agentic_coding').path(path).first();
+    case 'systems-design-ai-native':
+      return queryCollection('systems_design_ai_native').path(path).first();
+    case 'kubernetes-for-web-applications':
+      return queryCollection('kubernetes_for_web_applications').path(path).first();
+    default:
+      return Promise.resolve(null);
+  }
+}
 
-const collectionName = computed(() => collectionMap[courseSlug.value] || courseSlug.value);
+function queryCourseDays(course: string) {
+  switch (course) {
+    case 'agentic-coding':
+      return queryCollection('agentic_coding').order('day', 'ASC').all();
+    case 'systems-design-ai-native':
+      return queryCollection('systems_design_ai_native').order('day', 'ASC').all();
+    case 'kubernetes-for-web-applications':
+      return queryCollection('kubernetes_for_web_applications').order('day', 'ASC').all();
+    default:
+      return Promise.resolve([]);
+  }
+}
 
 // Fetch course metadata
 const { data: allCourses } = await useAsyncData(`lesson-course-meta-${courseSlug.value}`, () =>
@@ -46,14 +66,12 @@ const course = computed(() =>
 
 // Fetch current lesson
 const { data: page } = await useAsyncData(`lesson-${courseSlug.value}-${slug.value}`, () =>
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  queryCollection(collectionName.value as any).path(`/${courseSlug.value}/${slug.value}`).first()
+  queryLesson(courseSlug.value, slug.value)
 );
 
 // Fetch all days for sidebar + nav
 const { data: allDays } = await useAsyncData(`sidebar-${courseSlug.value}`, () =>
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  queryCollection(collectionName.value as any).order('day', 'ASC').all()
+  queryCourseDays(courseSlug.value)
 );
 
 const sidebarDays = computed(() =>
@@ -72,7 +90,8 @@ const weekColorMap: Record<number, string> = {
   1: '#3B82F6',
   2: '#10B981',
   3: '#8B5CF6',
-  4: '#FF006E'
+  4: '#FF006E',
+  5: '#F59E0B'
 };
 
 const prevDay = computed(() => {

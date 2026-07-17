@@ -1,0 +1,27 @@
+order: 3
+title: "Kubernetes for Web Applications"
+description: "A practical 30-day path to package, deploy, operate, secure, and evolve Node.js and Nuxt applications on Kubernetes."
+slug: kubernetes-for-web-applications
+color: "#326CE5"
+lessons: 30
+weeks:
+  - number: 1
+    name: "Container Foundations"
+    subtitle: "From Processes to Images"
+    color: "#3B82F6"
+  - number: 2
+    name: "Kubernetes Fundamentals"
+    subtitle: "From Local Containers to a Cluster"
+    color: "#10B981"
+  - number: 3
+    name: "Shipping Web Applications"
+    subtitle: "Networking, Configuration & Capacity"
+    color: "#8B5CF6"
+  - number: 4
+    name: "Reliable Operations"
+    subtitle: "Health, Delivery & Security"
+    color: "#FF006E"
+  - number: 5
+    name: "Platform Blueprint"
+    subtitle: "Architecture Decisions & Capstone"
+    color: "#F59E0B"

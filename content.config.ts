@@ -43,6 +43,18 @@ export default defineContentConfig({
         description: z.string(),
         tag: z.string()
       })
+    }),
+    kubernetes_for_web_applications: defineCollection({
+      type: 'page',
+      source: 'kubernetes-for-web-applications/*.md',
+      schema: z.object({
+        title: z.string(),
+        day: z.number(),
+        week: z.number(),
+        weekName: z.string(),
+        description: z.string(),
+        tag: z.string()
+      })
     })
   }
 });

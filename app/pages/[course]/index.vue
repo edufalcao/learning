@@ -15,8 +15,18 @@ onMounted(() => {
   completedSlugs.value = getCompletedSlugs(courseSlug.value);
 });
 
-// Auto-convert slug to collection name (hyphens → underscores)
-const collectionName = computed(() => courseSlug.value.replace(/-/g, '_'));
+function queryCourseDays(slug: string) {
+  switch (slug) {
+    case 'agentic-coding':
+      return queryCollection('agentic_coding').order('day', 'ASC').all();
+    case 'systems-design-ai-native':
+      return queryCollection('systems_design_ai_native').order('day', 'ASC').all();
+    case 'kubernetes-for-web-applications':
+      return queryCollection('kubernetes_for_web_applications').order('day', 'ASC').all();
+    default:
+      return Promise.resolve([]);
+  }
+}
 
 // Fetch course metadata
 const { data: allCourses } = await useAsyncData(`course-meta-${courseSlug.value}`, () =>
@@ -30,8 +40,7 @@ const course = computed(() =>
 
 // Fetch all days for this course
 const { data: rawDays } = await useAsyncData(`course-days-${courseSlug.value}`, () =>
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  queryCollection(collectionName.value as any).order('day', 'ASC').all()
+  queryCourseDays(courseSlug.value)
 );
 
 const days = computed<DayInfo[]>(() =>
