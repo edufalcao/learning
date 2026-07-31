@@ -147,6 +147,7 @@ A practical path from a Dockerfile to a production platform, aimed at applicatio
 30. [Your Kubernetes application platform blueprint](https://learning.edufalcao.com/kubernetes-for-web-applications/day-30)
 
 </details>
+
 ## Built with
 
 [Nuxt 4](https://nuxt.com) with static generation, [@nuxt/content](https://content.nuxt.com) for markdown-driven routing and Shiki highlighting, [Tailwind CSS](https://tailwindcss.com), deployed to [Cloudflare Pages](https://pages.cloudflare.com).
