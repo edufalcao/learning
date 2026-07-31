@@ -1,6 +1,6 @@
 # learning hub
 
-Free, long-form courses for working engineers. Three courses, 90 lessons, roughly ten minutes each, with exercises.
+Free, long-form courses for working engineers. Roughly ten minutes a lesson, with exercises.
 
 **[learning.edufalcao.com](https://learning.edufalcao.com)**
 
@@ -12,13 +12,13 @@ Building agent systems, from the mental model through to production. The agent l
 
 | Week | Theme | Days |
 |---|---|---|
-| 1 | **Foundations**: what Is an Agent? | 1–7 |
-| 2 | **Architecture**: designing Agent Systems | 8–14 |
-| 3 | **Implementation**: building Real Agents | 15–21 |
-| 4 | **Production**: advanced & Real-World | 22–30 |
+| 1 | **Foundations**: What Is an Agent? | 1–7 |
+| 2 | **Architecture**: Designing Agent Systems | 8–14 |
+| 3 | **Implementation**: Building Real Agents | 15–21 |
+| 4 | **Production**: Advanced & Real-World | 22–30 |
 
 <details>
-<summary>All 30 lessons</summary>
+<summary>All lessons</summary>
 
 1. [The Agent Mental Model](https://learning.edufalcao.com/agentic-coding/day-01)
 2. [Tools & Function Calling](https://learning.edufalcao.com/agentic-coding/day-02)
@@ -59,13 +59,13 @@ The architecture underneath AI-native products. Async-first design, RAG and vect
 
 | Week | Theme | Days |
 |---|---|---|
-| 1 | **Foundations**: thinking in AI-Native | 1–7 |
-| 2 | **Data & Context**: data & Context Management | 8–14 |
-| 3 | **Reliability**: reliability, Observability & Cost | 15–21 |
-| 4 | **Multi-Agent & Production**: multi-Agent Patterns & Production | 22–30 |
+| 1 | **Foundations**: Thinking in AI-Native | 1–7 |
+| 2 | **Data & Context Management** | 8–14 |
+| 3 | **Reliability, Observability & Cost** | 15–21 |
+| 4 | **Multi-Agent Patterns & Production** | 22–30 |
 
 <details>
-<summary>All 30 lessons</summary>
+<summary>All lessons</summary>
 
 1. [What Makes an App "AI-Native"?](https://learning.edufalcao.com/systems-design-ai-native/day-01)
 2. [LLMs as a Service: Latency, Cost, and Reliability Trade-offs](https://learning.edufalcao.com/systems-design-ai-native/day-02)
@@ -106,14 +106,14 @@ A practical path from a Dockerfile to a production platform, aimed at applicatio
 
 | Week | Theme | Days |
 |---|---|---|
-| 1 | **Container Foundations**: from Processes to Images | 1–5 |
-| 2 | **Kubernetes Fundamentals**: from Local Containers to a Cluster | 6–10 |
-| 3 | **Shipping Web Applications**: networking, Configuration & Capacity | 11–15 |
-| 4 | **Reliable Operations**: health, Delivery & Security | 16–20 |
-| 5 | **Platform Blueprint**: architecture Decisions & Capstone | 21–30 |
+| 1 | **Container Foundations**: From Processes to Images | 1–5 |
+| 2 | **Kubernetes Fundamentals**: From Local Containers to a Cluster | 6–10 |
+| 3 | **Shipping Web Applications**: Networking, Configuration & Capacity | 11–15 |
+| 4 | **Reliable Operations**: Health, Delivery & Security | 16–20 |
+| 5 | **Platform Blueprint**: Architecture Decisions & Capstone | 21–30 |
 
 <details>
-<summary>All 30 lessons</summary>
+<summary>All lessons</summary>
 
 1. [From processes to infrastructure abstractions](https://learning.edufalcao.com/kubernetes-for-web-applications/day-01)
 2. [Virtual machines: the right amount of knowledge](https://learning.edufalcao.com/kubernetes-for-web-applications/day-02)
